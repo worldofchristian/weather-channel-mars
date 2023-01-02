@@ -1,0 +1,22 @@
+.bigbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    width: 100%;
+    margin: auto;
+}
+
+.temp {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10vh;
+    width: 100%;
+    margin: auto;
+}
