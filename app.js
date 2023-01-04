@@ -1,8 +1,14 @@
 const API_KEY = 'DEMO_KEY'
 const API_URL = `https://api.nasa.gov/insight_weather/?
 api_key=${API_KEY}&feedtype=json&ver=1.0`
-// string interpolation 
+// inserts api key into the url through string interpolation 
 
+const previousWeatherToggle = document.querySelector
+('.show-previous-weather');
+const previousWeather = document.querySelector
+('previous-weather');
+const currentSolElement = document.querySelector
+('[data-current-sol]');
 let selectedSol
 
 getWeather().then(sols => {
@@ -13,7 +19,8 @@ getWeather().then(sols => {
 
 function displaySelectedSol(sols) {
     const selectedSol = sols[selectedSolIndex]
-    console.log(selectedSol)
+    currentSolElement.innerText = selectedSol.sol
+    // prints the getweather response to html
 }
 
 function getWeather() {
